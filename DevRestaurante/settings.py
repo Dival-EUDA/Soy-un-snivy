@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')e2o)6*-zcwu&tpiku%yb#2x%vj2(737p7olm_vtmo1dx0j(%k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -75,11 +75,16 @@ WSGI_APPLICATION = 'DevRestaurante.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-"""
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Restaurante',
+        'USER': 'UDA',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 """
@@ -91,6 +96,7 @@ DATABASES = {
         default=config('DATABASE_URL')
     )
 }
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
