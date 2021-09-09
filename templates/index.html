@@ -30,15 +30,15 @@ https://templatemo.com/tm-539-simple-house
 						<div class="col-md-6 col-12">
 							<img src="{%static 'img/simple-house-logo.png'%}" alt="Logo" class="tm-site-logo" />
 							<div class="tm-site-text-box">
-								<h1 class="tm-site-title">Simple House</h1>
-								<h6 class="tm-site-description">new restaurant template</h6>	
+								<h1 class="tm-site-title">UDA-FOOD</h1>
+								<h6 class="tm-site-description">Tú restaurante favorito</h6>
 							</div>
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
-								<li class="tm-nav-li"><a href="#" class="tm-nav-link active">Home</a></li>
-								<li class="tm-nav-li"><a href="#" class="tm-nav-link">About</a></li>
-								<li class="tm-nav-li"><a href="{%url 'webrestaurante:contact'%}" class="tm-nav-link">Contact</a></li>
+								<li class="tm-nav-li"><a href="{%url 'webrestaurante:init'%}" class="tm-nav-link active">Inicio</a></li>
+								<li class="tm-nav-li"><a href="{%url 'webrestaurante:about'%}" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="{%url 'webrestaurante:contact'%}" class="tm-nav-link">Contactos</a></li>
 							</ul>
 						</nav>	
 					</div>
@@ -70,7 +70,8 @@ https://templatemo.com/tm-539-simple-house
 					{%for arrayproduct in allcomida%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/01.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+
+							<img src="{{arrayproduct.img}}" sizes="100vw" class="img-fluid tm-gallery-img"/>
 							<figcaption>
 								<h4 class="tm-gallery-title">{{arrayproduct.nombre}}</h4>
 								<p class="tm-gallery-description">{{arrayproduct.tamaño}}</p>
@@ -82,10 +83,10 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/01.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">{{arrayproduct.nombre}}</h4>
-								<p class="tm-gallery-description">No hay disponibles</p>
+								<h4 class="tm-gallery-title">Producto Acabado</h4>
+								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
 								<p class="tm-gallery-price">Q. --</p>
 							</figcaption>
 						</figure>
@@ -100,7 +101,7 @@ https://templatemo.com/tm-539-simple-house
 					{%for arraybebida in allbebida%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/04.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="{{arrayproduct.img}}" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">{{arraybebida.nombre}}</h4>
 								<p class="tm-gallery-description">{{arraybebida.tamaño}}</p>
@@ -112,10 +113,10 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/04.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">{{arraybebida.nombre}}</h4>
-								<p class="tm-gallery-description">No hay</p>
+								<h4 class="tm-gallery-title">Producto Acabado</h4>
+								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
 								<p class="tm-gallery-price">Q. --</p>
 							</figcaption>
 						</figure>
@@ -129,8 +130,9 @@ https://templatemo.com/tm-539-simple-house
 					{%for arraypostre in allpostre%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/08.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="{{arrayproduct.img}}" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
+								adf
 								<h4 class="tm-gallery-title">{{arraypostre.nombre}}</h4>
 								<p class="tm-gallery-description">{{arraypostre.tamaño}}</p>
 								<p class="tm-gallery-price"{{arraypostre.precio}}</p>
@@ -141,16 +143,15 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{%static 'img/gallery/08.jpg'%}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
 							<figcaption>
-								<h4 class="tm-gallery-title">{{arraypostre.nombre}}</h4>
-								<p class="tm-gallery-description">No hay</p>
-								<p class="tm-gallery-price">Q. ---</p>
+								<h4 class="tm-gallery-title">Producto Acabado</h4>
+								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
+								<p class="tm-gallery-price">Q. --</p>
 							</figcaption>
 						</figure>
 					</article>
 					{%endif%}
-
 				</div> <!-- gallery page 3 -->
 			</div>
 			<div class="tm-section tm-container-inner">

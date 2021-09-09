@@ -8,18 +8,21 @@ class Comida(models.Model):
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
+    img = models.URLField(max_length=8000, blank = False, null = False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
 
 class Bebida(models.Model):
     pk_bebidas = models.AutoField(primary_key=True, null=False, blank=False)
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
+    img = models.URLField(max_length=8000, blank = False, null = False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
 
 class Postre(models.Model):
     pk_postres = models.AutoField(primary_key=True, null=False, blank=False)
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
+    img = models.URLField(max_length=8000, blank = False, null = False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
 
 class Menu(models.Model):
     pk_menu = models.AutoField(primary_key=True, null=False, blank=False)
