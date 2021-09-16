@@ -30,14 +30,14 @@ https://templatemo.com/tm-539-simple-house
 						<div class="col-md-6 col-12">
 							<img src="{%static 'img/simple-house-logo.png'%}" alt="Logo" class="tm-site-logo" />
 							<div class="tm-site-text-box">
-								<h1 class="tm-site-title">UDA-FOOD</h1>
-								<h6 class="tm-site-description">Tú restaurante favorito</h6>
+								<h1 class="tm-site-title">"Ingresa nombre del restaurante"</h1>
+								<h6 class="tm-site-description">Tú restaurante Favorito</h6>
 							</div>
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
 								<li class="tm-nav-li"><a href="{%url 'webrestaurante:init'%}" class="tm-nav-link active">Inicio</a></li>
-								<li class="tm-nav-li"><a href="{%url 'webrestaurante:about'%}" class="tm-nav-link">About</a></li>
+								<li class="tm-nav-li"><a href="{%url 'webrestaurante:about'%}" class="tm-nav-link">Acerca de</a></li>
 								<li class="tm-nav-li"><a href="{%url 'webrestaurante:contact'%}" class="tm-nav-link">Contactos</a></li>
 							</ul>
 						</nav>	
@@ -48,16 +48,16 @@ https://templatemo.com/tm-539-simple-house
 
 		<main>
 			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">Welcome to Simple House</h2>
-				<p class="col-12 text-center">Total 3 HTML pages are included in this template. Header image has a parallax effect. You can feel free to download, edit and use this TemplateMo layout for your commercial or non-commercial websites.</p>
+				<h2 class="col-12 text-center tm-section-title">Bienvenido a "Ingresa nombre del restaurante"</h2>
+				<p class="col-12 text-center">Aquí podras encontrar los esquisitos platillos que "Ingresa nombre del restaurante" fabrica, agradecemos tu visita</p>
 			</header>
 			
 			<div class="tm-paging-links">
 				<nav>
 					<ul>
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Pizza</a></li>
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Salad</a></li>
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Noodle</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Comidas</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Bebidas</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Postres</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -65,13 +65,13 @@ https://templatemo.com/tm-539-simple-house
 			<!-- Gallery -->
 			<div class="row tm-gallery">
 				<!-- gallery page 1 -->
-				<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+				<div id="tm-gallery-page-comidas" class="tm-gallery-page">
 					{%if allcomida%}
 					{%for arrayproduct in allcomida%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
 
-							<img src="{{arrayproduct.img}}" sizes="100vw" class="img-fluid tm-gallery-img"/>
+							<img src="{{arrayproduct.img}}" height="200px" class="tm-gallery-img"/>
 							<figcaption>
 								<h4 class="tm-gallery-title">{{arrayproduct.nombre}}</h4>
 								<p class="tm-gallery-description">{{arrayproduct.tamaño}}</p>
@@ -83,7 +83,7 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" height="200px" class="tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Producto Acabado</h4>
 								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
@@ -96,12 +96,12 @@ https://templatemo.com/tm-539-simple-house
 				<!-- gallery page 1 -->
 
 				<!-- gallery page 2 -->
-				<div id="tm-gallery-page-salad" class="tm-gallery-page hidden">
+				<div id="tm-gallery-page-bebidas" class="tm-gallery-page hidden">
 					{%if allbebida%}
 					{%for arraybebida in allbebida%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{{arrayproduct.img}}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="{{arraybebida.img}}" alt="Image" height="200px" class="tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">{{arraybebida.nombre}}</h4>
 								<p class="tm-gallery-description">{{arraybebida.tamaño}}</p>
@@ -113,7 +113,7 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" height="200px" class="tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Producto Acabado</h4>
 								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
@@ -125,12 +125,12 @@ https://templatemo.com/tm-539-simple-house
 				</div> <!-- gallery page 2 -->
 				
 				<!-- gallery page 3 -->
-				<div id="tm-gallery-page-noodle" class="tm-gallery-page hidden">
+				<div id="tm-gallery-page-postres" class="tm-gallery-page hidden">
 					{%if allpostre%}
 					{%for arraypostre in allpostre%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="{{arrayproduct.img}}" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="{{arraypostre.img}}" alt="Image" height="200px" class="tm-gallery-img" />
 							<figcaption>
 								adf
 								<h4 class="tm-gallery-title">{{arraypostre.nombre}}</h4>
@@ -143,7 +143,7 @@ https://templatemo.com/tm-539-simple-house
 					{%else%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 						<figure>
-							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" class="img-fluid tm-gallery-img" />
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" height="200px" class="tm-gallery-img" />
 							<figcaption>
 								<h4 class="tm-gallery-title">Producto Acabado</h4>
 								<p class="tm-gallery-description">Sentimos la demora, pronto tendremos más</p>
@@ -163,9 +163,8 @@ https://templatemo.com/tm-539-simple-house
 					</div>
 					<div class="col-md-6">
 						<div class="tm-description-box"> 
-							<h4 class="tm-gallery-title">Maecenas nulla neque</h4>
-							<p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a rel="nofollow" href="https://templatemo.com/contact">talk to us</a> for additional permissions about our templates. Thank you.</p>
-							<a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
+							<h4 class="tm-gallery-title">Nutrete bien</h4>
+							<p class="tm-mb-45">Come sano y disfruta<a rel="nofollow"</p>
 						</div>
 					</div>
 				</div>
@@ -175,7 +174,7 @@ https://templatemo.com/tm-539-simple-house
 		<footer class="tm-footer text-center">
 			<p>Copyright &copy; 2020 Simple House 
             
-            | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+            | Diseñado por: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
 		</footer>
 	</div>
 	<script src="{%static 'js/jquery.min.js'%}"></script>
