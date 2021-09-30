@@ -8,7 +8,7 @@ class Comida(models.Model):
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
-    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
+    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/sDGPTK60/51706.jpg')
 
     class Meta:
         verbose_name = 'Comida'
@@ -23,7 +23,7 @@ class Bebida(models.Model):
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
-    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
+    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/mkDjZsSb/5406010.jpg')
 
     class Meta:
         verbose_name = 'Bebida'
@@ -38,7 +38,7 @@ class Postre(models.Model):
     nombre = models.CharField(max_length=50, null=False, blank=False)
     tamaño = models.CharField(max_length=50, null=False, blank=False)
     precio = models.CharField(max_length=50, null=False, blank=False)
-    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
+    img = models.URLField(max_length=8000, blank=False, null=False, default='https://i.postimg.cc/8kj0M2v2/3606.jpg')
 
     class Meta:
         verbose_name = 'Postre'
