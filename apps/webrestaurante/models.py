@@ -64,3 +64,11 @@ class Menu(models.Model):
     def __str__(self):
         return "{0}".format(self.tiempo_comida)
 
+class empleado(models.Model):
+    pk_empleado = models.AutoField(primary_key=True, blank=False, null=False)
+    nombre = models.CharField(max_length=50, blank=False, null=False)
+    apellido = models.CharField(max_length=50, blank=False, null=False)
+    fecha_nacimiento = models.DateField(blank=False, null=False)
+    salario = models.DecimalField(max_digits=8, decimal_places=2, null=False)
+    telefono = models.TextField(max_length=8, blank=True, null=True)
+    direccion = models.TextField(blank=False, null= False)

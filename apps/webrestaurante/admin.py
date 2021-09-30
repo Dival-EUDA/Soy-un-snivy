@@ -4,6 +4,7 @@ from import_export.admin import ImportExportModelAdmin
 from .models import *
 # Register your models here.
 
+###
 class resourceComida(resources.ModelResource):
     class Meta:
         model = Comida
@@ -14,7 +15,6 @@ class AdminComida(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = resourceComida
 
 admin.site.register(Comida, AdminComida)
-
 ###
 
 class resourcePostre(resources.ModelResource):
